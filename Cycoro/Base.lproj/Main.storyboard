@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,96 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cycoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cycoro-Background" translatesAutoresizingMaskIntoConstraints="NO" id="lxT-g8-Kcp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="JKJ-Nv-HdI">
+                                <rect key="frame" x="68.5" y="210" width="277" height="476"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Lp0-3P-9D1">
+                                        <rect key="frame" x="38.5" y="0.0" width="200" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="D8k-xf-8GZ"/>
+                                            <constraint firstAttribute="height" constant="100" id="GSC-Kp-FIY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="09i-bs-VHl">
+                                        <rect key="frame" x="0.0" y="125" width="277" height="120"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cycoro-One" translatesAutoresizingMaskIntoConstraints="NO" id="5yg-MR-gFS">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="13q-yA-afn"/>
+                                                    <constraint firstAttribute="height" constant="120" id="XkW-Sb-ZcJ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cycoro-One" translatesAutoresizingMaskIntoConstraints="NO" id="37e-t2-HqL">
+                                                <rect key="frame" x="157" y="0.0" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="PSD-98-ycr"/>
+                                                    <constraint firstAttribute="width" constant="120" id="mnz-Tn-RTx"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b5E-vw-HKZ">
+                                        <rect key="frame" x="98.5" y="270" width="80" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="oOT-q2-OhO"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="1"/>
+                                            <segment title="2"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="changeNumberOfDice:" destination="BYZ-38-t0r" eventType="valueChanged" id="jKV-WF-Kg2"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1y-fB-9sf">
+                                        <rect key="frame" x="63.5" y="326" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Vem-3D-f5J"/>
+                                            <constraint firstAttribute="height" constant="150" id="xn8-bJ-7ie"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Roll"/>
+                                        <connections>
+                                            <action selector="rollDice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X5f-B1-wuo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lxT-g8-Kcp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9qj-Rv-mhW"/>
+                            <constraint firstItem="lxT-g8-Kcp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qkx-cX-u9P"/>
+                            <constraint firstItem="JKJ-Nv-HdI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SaT-3D-kmr"/>
+                            <constraint firstItem="JKJ-Nv-HdI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cb1-Ag-G9K"/>
+                            <constraint firstAttribute="bottom" secondItem="lxT-g8-Kcp" secondAttribute="bottom" id="nH1-yN-evy"/>
+                            <constraint firstItem="lxT-g8-Kcp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uBI-wg-dwi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceLeft" destination="5yg-MR-gFS" id="nDw-Tk-XuN"/>
+                        <outlet property="diceRight" destination="37e-t2-HqL" id="XnY-0h-5cT"/>
+                        <outlet property="numberOfDice" destination="b5E-vw-HKZ" id="Gql-7T-UZy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cycoro-Background" width="1024" height="1024"/>
+        <image name="Cycoro-One" width="1024" height="1024"/>
+        <image name="Logo" width="1320" height="1320"/>
+        <image name="Roll" width="1200" height="1200"/>
+    </resources>
 </document>
