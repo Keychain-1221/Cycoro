@@ -3,7 +3,7 @@
 Privacy Policy
 
 
-Keita Yamada has built the Dice - Cycoro app as a Free iOS app. This SERVICE is provided by Keita Yamada at no cost and is intended for use as is.
+Keita Yamada has built the Dice - Roll them up app as a Free iOS app. This SERVICE is provided by Keita Yamada at no cost and is intended for use as is.
 
 This page is used to inform visitors regarding the policies with the collection, use, and disclosure of Personal Information for those who has decided to use the Service.
 
