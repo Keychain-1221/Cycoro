@@ -1,4 +1,4 @@
-# Dice - Cycoro
+# Dice - Roll them up
 
 Privacy Policy
 
