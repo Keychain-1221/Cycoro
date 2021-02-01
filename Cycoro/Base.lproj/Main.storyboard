@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cycoro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lxT-g8-Kcp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="JKJ-Nv-HdI">
+                                <rect key="frame" x="68.5" y="283" width="277" height="330"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="09i-bs-VHl">
+                                        <rect key="frame" x="0.0" y="0.0" width="277" height="120"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cycoro-One" translatesAutoresizingMaskIntoConstraints="NO" id="5yg-MR-gFS">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="13q-yA-afn"/>
+                                                    <constraint firstAttribute="height" constant="120" id="XkW-Sb-ZcJ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cycoro-One" translatesAutoresizingMaskIntoConstraints="NO" id="37e-t2-HqL">
+                                                <rect key="frame" x="157" y="0.0" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="PSD-98-ycr"/>
+                                                    <constraint firstAttribute="width" constant="120" id="mnz-Tn-RTx"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b5E-vw-HKZ">
+                                        <rect key="frame" x="78.5" y="175" width="120" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="oOT-q2-OhO"/>
+                                            <constraint firstAttribute="height" constant="40" id="qVS-Fe-0kC"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="1"/>
+                                            <segment title="2"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="changeNumberOfDice:" destination="BYZ-38-t0r" eventType="valueChanged" id="jKV-WF-Kg2"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t92-bF-AYr">
+                                        <rect key="frame" x="63.5" y="270" width="150" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="AUT-Q2-6T4"/>
+                                            <constraint firstAttribute="width" constant="150" id="Nux-KJ-7dK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Roll Dice">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rollDice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nkl-zZ-2tg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLu-ad-05V">
+                                <rect key="frame" x="357" y="65" width="25" height="24"/>
+                                <connections>
+                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GoP-bx-4CZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DLu-ad-05V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="5PT-W2-2Ul"/>
+                            <constraint firstItem="lxT-g8-Kcp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9qj-Rv-mhW"/>
+                            <constraint firstItem="lxT-g8-Kcp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qkx-cX-u9P"/>
+                            <constraint firstItem="JKJ-Nv-HdI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SaT-3D-kmr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DLu-ad-05V" secondAttribute="trailing" constant="32" id="WJw-aN-rJ4"/>
+                            <constraint firstItem="JKJ-Nv-HdI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cb1-Ag-G9K"/>
+                            <constraint firstAttribute="bottom" secondItem="lxT-g8-Kcp" secondAttribute="bottom" id="nH1-yN-evy"/>
+                            <constraint firstItem="lxT-g8-Kcp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uBI-wg-dwi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="lxT-g8-Kcp" id="L06-hK-djF"/>
+                        <outlet property="diceLeft" destination="5yg-MR-gFS" id="nDw-Tk-XuN"/>
+                        <outlet property="diceRight" destination="37e-t2-HqL" id="XnY-0h-5cT"/>
+                        <outlet property="numberOfDice" destination="b5E-vw-HKZ" id="Gql-7T-UZy"/>
+                        <outlet property="rollButton" destination="t92-bF-AYr" id="4U4-Dh-ZXX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Cycoro-One" width="1024" height="1024"/>
+    </resources>
+</document>
